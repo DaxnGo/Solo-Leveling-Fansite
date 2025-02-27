@@ -12,10 +12,7 @@ Halaman web ini menampilkan karakter-karakter dari seri Solo Leveling dengan des
 - 🎨 **CSS**: Styling dan tata letak halaman.
 
 # 📁 Struktur Direktori
-/solo-leveling-website
-│── 📄 index.html  # Halaman utama
-│── 🎨 style.css   # File CSS untuk styling
-│── 📁 images/     # Folder untuk menyimpan gambar karakter
+![image](https://github.com/user-attachments/assets/cf77f104-c2e1-4311-9acc-f3830c7d4572)
 
 # 🤝 Kontribusi
 Jika Anda ingin berkontribusi, silakan fork repository ini dan buat pull request dengan perubahan atau fitur tambahan yang diusulkan.
