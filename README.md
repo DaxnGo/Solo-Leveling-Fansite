@@ -1,23 +1,26 @@
-Solo Leveling Fan Website
-Welcome to the Solo Leveling Fan Website, a dedicated space for fans of the popular Solo Leveling web novel and manhwa. This website is built using HTML and CSS, providing an engaging and visually appealing experience for visitors who want to explore the world of Solo Leveling.
+⚔️ Solo Leveling Website ⚡
+📝 Deskripsi
+🌐 Halaman web ini menampilkan karakter-karakter dari seri Solo Leveling dengan desain yang responsif dan menarik. Dibangun menggunakan HTML dan CSS, halaman ini menyajikan informasi dasar mengenai karakter utama dalam bentuk kartu interaktif.
 
-✨ Features
-Character Profiles – Learn about Sung Jin-Woo, Cha Hae-In, and other key characters.
-Story Overview – A brief summary of the Solo Leveling storyline.
-Image Gallery – Stunning visuals and fan art from the series.
-Light & Dark Mode (Optional) – A simple CSS toggle for different themes.
-Responsive Design – Optimized for both desktop and mobile viewing.
-🔧 Technologies Used
-HTML – Structuring the website’s content.
-CSS – Styling for an immersive design and smooth user experience.
-🚀 How to View the Website
-Download or clone this repository.
-Open the index.html file in your browser.
-📌 Future Improvements
-Adding JavaScript for interactive features.
-Expanding content with more detailed lore and fan discussions.
-Implementing animations for a more dynamic experience.
-📝 Credits
-This website was designed and developed by [Your Name], inspired by Solo Leveling, created by Chugong.
+🔥 Fitur
+🖥️ Desain responsif: Tata letak menyesuaikan dengan berbagai ukuran layar.
+🎴 Kartu karakter: Menampilkan gambar dan informasi singkat tentang karakter utama.
+🧭 Navigasi sederhana: Memudahkan pengguna dalam menjelajahi halaman.
+📜 Footer informatif: Menyertakan hak cipta dan tautan terkait.
 
-Feel free to contribute or share feedback to improve the site!
+🛠️ Teknologi yang Digunakan
+🏗️ HTML: Struktur utama halaman.
+🎨 CSS: Styling dan tata letak halaman.
+
+📁 Struktur Direktori
+/solo-leveling-website
+│── 📄 index.html  # 🏠 Halaman utama
+│── 🎨 style.css   # 🖌️ File CSS untuk styling
+│── 🖼️ images/     # 📂 Folder untuk menyimpan gambar karakter
+
+🤝 Kontribusi
+Jika Anda ingin berkontribusi, silakan fork repository ini dan buat pull request dengan perubahan atau fitur tambahan yang diusulkan.
+
+📜 Lisensi
+🎓 Proyek ini dibuat untuk tujuan edukasi dan tidak memiliki afiliasi resmi dengan Solo Leveling. Semua 🖼gambar dan aset karakter adalah hak cipta dari pemiliknya masing-masing.
+
