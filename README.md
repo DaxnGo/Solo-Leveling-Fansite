@@ -97,13 +97,7 @@ If you encounter 404 errors after deployment:
 
 ## 💡 Contribution Guidelines
 
-Contributions are welcome! If you'd like to improve the site:
-
-1. Fork the repository
-2. Create a feature branch (`git checkout -b feature/amazing-feature`)
-3. Commit your changes (`git commit -m 'Add some amazing feature'`)
-4. Push to the branch (`git push origin feature/amazing-feature`)
-5. Open a Pull Request
+Contributions are welcome! Please feel free to submit a Pull Request or reach out via email at [matthewpangemanan15@gmail.com].
 
 ## 📜 License
 
