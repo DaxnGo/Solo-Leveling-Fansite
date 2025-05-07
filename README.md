@@ -12,11 +12,16 @@ A responsive and visually appealing website dedicated to the popular manhwa/anim
 - 🧙 **Shadow Army Section**: Dedicated section for Jin-Woo's shadow soldiers
 - 🔢 **Powers & Abilities**: Information about the protagonist's abilities
 - 📱 **Mobile-First**: Designed with a mobile-first approach with responsive media queries
+- ✨ **Animations**: Smooth animations and transitions using AOS library
+- 🖱️ **Interactive Elements**: Modal windows with detailed character information
 
 ## 🛠️ Technologies Used
 
 - **HTML5**: Semantic structure
-- **CSS3**: Modern styling with flexbox and responsive design
+- **CSS3**: Modern styling with flexbox, grid, and responsive design
+- **JavaScript**: Interactive features and animations
+- **AOS**: Animate On Scroll library for smooth animations
+- **Font Awesome**: Icon library for enhanced UI elements
 - **Custom Design**: Original layout and color scheme inspired by the Solo Leveling series
 
 ## 📁 Project Structure
@@ -27,11 +32,16 @@ Solo-Leveling-Fansite/
 │   └── index.html          # Main HTML file
 ├── CSS/
 │   └── style.css           # Stylesheet
+├── js/
+│   └── main.js             # JavaScript functionality
 ├── Images/                 # Image assets
 │   ├── Solo Leveling Logo PNG.webp
 │   ├── Sung Jin-Woo.webp
 │   ├── Cha Hae-In.webp
 │   └── ...
+├── index.html              # Root redirect file
+├── vercel.json             # Vercel deployment configuration
+├── package.json            # Project dependencies and scripts
 └── README.md               # Project documentation
 ```
 
@@ -45,16 +55,45 @@ Solo-Leveling-Fansite/
 
 2. Open the project in your preferred code editor
 
-3. View the website by opening `HTML/index.html` in a browser
+3. View the website by opening `index.html` in a browser
+
+## 🌐 Deployment
+
+### Deploying to Vercel
+
+1. Fork or clone this repository
+
+2. Sign up or log in to [Vercel](https://vercel.com/)
+
+3. Click "New Project" and import your repository
+
+4. Configure the project with these settings:
+
+   - **Framework Preset**: Other
+   - **Build Command**: `npm run build`
+   - **Output Directory**: `public`
+   - **Install Command**: `npm install`
+
+5. Click "Deploy" and wait for the build to complete
+
+6. Your site will be live at `https://your-project-name.vercel.app`
+
+### Fixing 404 Errors
+
+If you encounter 404 errors after deployment:
+
+1. Make sure your `vercel.json` file is correctly set up
+2. Check that file paths in HTML, CSS, and JavaScript files use the correct relative paths
+3. Redeploy your project after making changes
 
 ## 🔮 Improvement Roadmap
 
-- **JavaScript Integration**: Add interactive elements and animations
 - **Character Database**: Expand with more characters and detailed information
 - **Responsive Image Optimization**: Implement different image sizes for various devices
 - **Dark/Light Theme Toggle**: Allow users to switch between themes
 - **Gallery Section**: Add a dedicated image gallery for artwork
 - **Quiz Feature**: Implement an interactive quiz about Solo Leveling lore
+- **Backend Integration**: Add a simple backend for more dynamic content
 
 ## 💡 Contribution Guidelines
 
