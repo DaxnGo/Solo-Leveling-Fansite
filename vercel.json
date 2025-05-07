@@ -1,5 +1,5 @@
 {
-  "version": 2,
+  "version": 22,
   "routes": [
     { "handle": "filesystem" },
     { "src": "/", "dest": "/HTML/index.html" },

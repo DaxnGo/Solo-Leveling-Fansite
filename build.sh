@@ -6,7 +6,7 @@ mkdir -p public/CSS
 mkdir -p public/js
 mkdir -p public/Images
 
-# Copy all files to public directory
+# Copy all files to the public directory
 cp -r HTML/* public/HTML/
 cp -r CSS/* public/CSS/
 cp -r js/* public/js/
