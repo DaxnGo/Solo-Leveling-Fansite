@@ -2,7 +2,7 @@
 
 A responsive and visually appealing website dedicated to the popular manhwa/anime series "Solo Leveling". The site showcases the main characters, shadows, and key elements from the series with an engaging user interface.
 
-![Solo Leveling Logo](/Images/Solo%20Leveling%20Logo%20PNG.webp)
+![image](https://github.com/user-attachments/assets/72b0c2a9-2e20-4346-b9bd-3884cad58b12)
 
 ## 🚀 Features
 
