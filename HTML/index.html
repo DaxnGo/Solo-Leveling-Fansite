@@ -1,11 +1,20 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" class="dark-theme">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Solo Leveling</title>
+    <meta
+      name="description"
+      content="Fan site dedicated to Solo Leveling featuring characters, shadows, and abilities from the popular webtoon and anime" />
+    <title>Solo Leveling - Unofficial Fan Site</title>
     <link rel="icon" type="image/x-icon" href="../Images/Solo Leveling.webp" />
     <link rel="stylesheet" href="../CSS/style.css" />
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap"
+      rel="stylesheet" />
     <!-- Font Awesome for icons -->
     <link
       rel="stylesheet"
@@ -14,37 +23,63 @@
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
   </head>
   <body>
+    <!-- Skip to content link for accessibility -->
+    <a href="#story" class="skip-link">Skip to main content</a>
+
+    <!-- Loading indicator -->
+    <div class="loading">
+      <div class="loading-spinner"></div>
+    </div>
     <!-- Header Section -->
-    <header>
+    <header role="banner">
       <div class="logo">
-        <img
-          src="../Images/Solo-Leveling-Logo-PNG.webp"
-          alt="Solo Leveling Logo"
-          class="logo-img" />
+        <a href="#" aria-label="Solo Leveling Home">
+          <img
+            src="../Images/Solo-Leveling-Logo-PNG.webp"
+            alt="Solo Leveling Logo"
+            class="logo-img" />
+        </a>
       </div>
-      <nav class="navbar">
-        <div class="menu-toggle" id="mobile-menu">
+      <nav class="navbar" aria-label="Main navigation">
+        <button
+          class="menu-toggle"
+          id="mobile-menu"
+          aria-label="Toggle navigation menu"
+          aria-expanded="false"
+          aria-controls="nav-menu">
           <i class="fas fa-bars"></i>
-        </div>
-        <ul class="nav-list">
+        </button>
+        <ul class="nav-list" id="nav-menu">
           <li>
-            <a href="#story"><i class="fas fa-book"></i> Story</a>
+            <a href="#story"
+              ><i class="fas fa-book" aria-hidden="true"></i>
+              <span>Story</span></a
+            >
           </li>
           <li>
-            <a href="#characters"><i class="fas fa-user-alt"></i> Characters</a>
+            <a href="#characters"
+              ><i class="fas fa-user-alt" aria-hidden="true"></i>
+              <span>Characters</span></a
+            >
           </li>
           <li>
-            <a href="#shadows"><i class="fas fa-ghost"></i> Shadows</a>
+            <a href="#shadows"
+              ><i class="fas fa-ghost" aria-hidden="true"></i>
+              <span>Shadows</span></a
+            >
           </li>
           <li>
-            <a href="#powers"><i class="fas fa-bolt"></i> Powers</a>
+            <a href="#powers"
+              ><i class="fas fa-bolt" aria-hidden="true"></i>
+              <span>Powers</span></a
+            >
           </li>
         </ul>
       </nav>
     </header>
 
-    <main class="container">
-      <article id="story" data-aos="fade-up">
+    <main class="container" role="main">
+      <article id="story" data-aos="fade-up" data-aos-duration="800">
         <h2>The Story</h2>
         <p>
           The story follows Sung Jin-Woo, the weakest Hunter ranked as an
@@ -62,49 +97,76 @@
         </p>
       </article>
 
-      <section id="characters" class="section" data-aos="fade-up">
+      <section
+        id="characters"
+        class="section"
+        data-aos="fade-up"
+        data-aos-duration="800"
+        data-aos-delay="100">
         <article>
           <h2>Characters</h2>
           <div class="character-cards">
-            <div class="character-card" data-aos="zoom-in" data-aos-delay="100">
+            <div
+              class="character-card"
+              data-aos="fade-up"
+              data-aos-delay="150"
+              data-aos-anchor-placement="top-bottom">
               <img src="../Images/Sung Jin-Woo.webp" alt="Sung Jin-Woo" />
-              <h3>Sung Jin-Woo</h3>
-              <p>
-                The main protagonist who evolves from the weakest E-rank hunter
-                to become an unstoppable force. His unique ability to level up
-                transforms him into one of the most powerful beings in
-                existence.
-              </p>
-              <button class="read-more-btn" data-character="jinwoo">
-                Read More
-              </button>
+              <div class="character-card-content">
+                <h3>Sung Jin-Woo</h3>
+                <p>
+                  The main protagonist who evolves from the weakest E-rank
+                  hunter to become an unstoppable force. His unique ability to
+                  level up transforms him into one of the most powerful beings
+                  in existence.
+                </p>
+                <button class="read-more-btn" data-character="jinwoo">
+                  Read More
+                </button>
+              </div>
             </div>
-            <div class="character-card" data-aos="zoom-in" data-aos-delay="200">
+            <div
+              class="character-card"
+              data-aos="fade-up"
+              data-aos-delay="250"
+              data-aos-anchor-placement="top-bottom">
               <img src="../Images/Cha Hae-In.webp" alt="Cha Hae-In" />
-              <h3>Cha Hae-In</h3>
-              <p>
-                An S-rank hunter known for her exceptional sword skills and
-                unique ability to smell other hunters. She becomes increasingly
-                interested in Sung Jin-Woo as his powers grow.
-              </p>
-              <button class="read-more-btn" data-character="chahaein">
-                Read More
-              </button>
+              <div class="character-card-content">
+                <h3>Cha Hae-In</h3>
+                <p>
+                  An S-rank hunter known for her exceptional sword skills and
+                  unique ability to smell other hunters. She becomes
+                  increasingly interested in Sung Jin-Woo as his powers grow.
+                </p>
+                <button class="read-more-btn" data-character="chahaein">
+                  Read More
+                </button>
+              </div>
             </div>
-            <div class="character-card" data-aos="zoom-in" data-aos-delay="300">
+            <div
+              class="character-card"
+              data-aos="fade-up"
+              data-aos-delay="350"
+              data-aos-anchor-placement="top-bottom">
               <img src="../Images/Go Gun-hee.webp" alt="Go Gun-hee" />
-              <h3>Go Gun-hee</h3>
-              <p>
-                Go Gun-hee is the Chairman of the Korean Hunter Association. He
-                plays a pivotal role in supporting Jin-Woo and protecting
-                humanity from powerful threats.
-              </p>
-              <button class="read-more-btn" data-character="gogunhee">
-                Read More
-              </button>
+              <div class="character-card-content">
+                <h3>Go Gun-hee</h3>
+                <p>
+                  Go Gun-hee is the Chairman of the Korean Hunter Association.
+                  He plays a pivotal role in supporting Jin-Woo and protecting
+                  humanity from powerful threats.
+                </p>
+                <button class="read-more-btn" data-character="gogunhee">
+                  Read More
+                </button>
+              </div>
             </div>
           </div>
-          <aside class="aside-right" data-aos="fade-left">
+          <aside
+            class="aside-right"
+            data-aos="fade-left"
+            data-aos-duration="800"
+            data-aos-delay="400">
             <img src="../Images/Aside_1.webp" alt="Solov_1" />
             <h3>Fun Fact</h3>
             <ul>
@@ -122,44 +184,71 @@
           </aside>
         </article>
       </section>
-      <section id="shadows" class="section" data-aos="fade-up">
+      <section
+        id="shadows"
+        class="section"
+        data-aos="fade-up"
+        data-aos-duration="800"
+        data-aos-offset="200">
         <article>
           <h2>Shadows</h2>
           <div class="character-cards">
-            <div class="character-card" data-aos="zoom-in" data-aos-delay="100">
+            <div
+              class="character-card"
+              data-aos="fade-up"
+              data-aos-delay="150"
+              data-aos-anchor-placement="top-bottom">
               <img src="../Images/Igris.webp" alt="Igris" />
-              <h3>Igris</h3>
-              <p>
-                Loyal and disciplined, often likened to a knight. Igris is one
-                of Jin-Woo's strongest and most reliable shadows.
-              </p>
-              <button class="read-more-btn" data-character="igris">
-                Read More
-              </button>
+              <div class="character-card-content">
+                <h3>Igris</h3>
+                <p>
+                  Loyal and disciplined, often likened to a knight. Igris is one
+                  of Jin-Woo's strongest and most reliable shadows.
+                </p>
+                <button class="read-more-btn" data-character="igris">
+                  Read More
+                </button>
+              </div>
             </div>
-            <div class="character-card" data-aos="zoom-in" data-aos-delay="200">
+            <div
+              class="character-card"
+              data-aos="fade-up"
+              data-aos-delay="250"
+              data-aos-anchor-placement="top-bottom">
               <img src="../Images/Iron.webp" alt="Iron" />
-              <h3>Iron</h3>
-              <p>
-                Aggressive and durable, though somewhat clumsy in personality.
-              </p>
-              <button class="read-more-btn" data-character="iron">
-                Read More
-              </button>
+              <div class="character-card-content">
+                <h3>Iron</h3>
+                <p>
+                  Aggressive and durable, though somewhat clumsy in personality.
+                </p>
+                <button class="read-more-btn" data-character="iron">
+                  Read More
+                </button>
+              </div>
             </div>
-            <div class="character-card" data-aos="zoom-in" data-aos-delay="300">
+            <div
+              class="character-card"
+              data-aos="fade-up"
+              data-aos-delay="350"
+              data-aos-anchor-placement="top-bottom">
               <img src="../Images/Beru.webp" alt="Beru" />
-              <h3>Beru</h3>
-              <p>
-                Fierce and ruthless in battle but comical when seeking Jin-Woo's
-                approval.
-              </p>
-              <button class="read-more-btn" data-character="beru">
-                Read More
-              </button>
+              <div class="character-card-content">
+                <h3>Beru</h3>
+                <p>
+                  Fierce and ruthless in battle but comical when seeking
+                  Jin-Woo's approval.
+                </p>
+                <button class="read-more-btn" data-character="beru">
+                  Read More
+                </button>
+              </div>
             </div>
           </div>
-          <aside class="aside-right" data-aos="fade-left">
+          <aside
+            class="aside-right"
+            data-aos="fade-left"
+            data-aos-duration="800"
+            data-aos-delay="400">
             <img src="../Images/Aside_2.webp" alt="Solov_2" />
             <h3>Fun Fact</h3>
             <ul>
@@ -183,7 +272,12 @@
         </article>
       </section>
 
-      <section id="powers" class="powers-section" data-aos="fade-up">
+      <section
+        id="powers"
+        class="powers-section"
+        data-aos="fade-up"
+        data-aos-duration="800"
+        data-aos-offset="200">
         <article>
           <div>
             <h2>Powers and Abilities</h2>
@@ -193,15 +287,24 @@
               Notable powers include:
             </p>
             <ul class="list-MP">
-              <li data-aos="fade-right" data-aos-delay="100">
+              <li
+                data-aos="fade-right"
+                data-aos-delay="150"
+                data-aos-anchor-placement="center-bottom">
                 <strong>Shadow Army</strong>
                 Jin-Woo can summon and control an army of shadows.
               </li>
-              <li data-aos="fade-right" data-aos-delay="200">
+              <li
+                data-aos="fade-right"
+                data-aos-delay="250"
+                data-aos-anchor-placement="center-bottom">
                 <strong>Stealth</strong>
                 Allows him to move undetected by enemies.
               </li>
-              <li data-aos="fade-right" data-aos-delay="300">
+              <li
+                data-aos="fade-right"
+                data-aos-delay="350"
+                data-aos-anchor-placement="center-bottom">
                 <strong>Infinite Growth</strong>
                 His leveling ability has no limits.
               </li>
@@ -212,18 +315,44 @@
     </main>
 
     <!-- Modal for character details -->
-    <div id="characterModal" class="modal">
+    <div
+      id="characterModal"
+      class="modal"
+      aria-modal="true"
+      role="dialog"
+      aria-labelledby="modalTitle"
+      aria-hidden="true">
       <div class="modal-content">
-        <span class="close-modal">&times;</span>
+        <span class="close-modal" aria-label="Close modal">&times;</span>
         <div id="modalContent"></div>
       </div>
     </div>
 
-    <footer class="footer">
+    <!-- Theme Switch -->
+    <div class="theme-switch-wrapper">
+      <label class="theme-switch" for="checkbox">
+        <input type="checkbox" id="checkbox" />
+        <div class="slider">
+          <i class="fas fa-moon"></i>
+          <i class="fas fa-sun"></i>
+        </div>
+      </label>
+    </div>
+
+    <!-- Scroll to top button -->
+    <button class="scroll-top" id="scrollTop" aria-label="Scroll to top">
+      <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <footer class="footer" role="contentinfo">
       <div class="footer-content">
         <div class="footer-section">
-          <h3>Solo Leveling</h3>
-          <p>A fansite dedicated to the popular manhwa and anime series.</p>
+          <h3>About Solo Leveling</h3>
+          <p>
+            Solo Leveling is a South Korean web novel written by Chugong. It was
+            serialized in Kakao's digital platform KakaoPage and concluded in
+            2018. The novel has been adapted into a webtoon and anime.
+          </p>
         </div>
         <div class="footer-section">
           <h3>Quick Links</h3>
@@ -235,7 +364,7 @@
           </ul>
         </div>
         <div class="footer-section">
-          <h3>Connect</h3>
+          <h3>Connect With Us</h3>
           <div class="social-icons">
             <a
               href="https://x.com/hellopassingby"
@@ -259,10 +388,13 @@
         </div>
       </div>
       <div class="footer-bottom">
-        <p>&copy; 2025 Solo Leveling Fan Page. All rights reserved.</p>
         <p>
-          Solo Leveling is written by Chugong and illustrated by DUBU (REDICE
-          Studio).
+          &copy; 2023-2025 Solo Leveling Fan Site. This is an unofficial
+          fan-made website.
+        </p>
+        <p>
+          All characters, images, and content related to Solo Leveling are the
+          property of the original creators.
         </p>
       </div>
     </footer>

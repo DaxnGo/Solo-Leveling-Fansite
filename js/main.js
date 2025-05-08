@@ -1,20 +1,86 @@
 // Initialize AOS animation library
 document.addEventListener("DOMContentLoaded", () => {
-  // Initialize AOS
-  AOS.init({
-    duration: 800,
-    easing: "ease",
-    once: true,
-    offset: 100,
+  // Handle loading screen
+  const loader = document.querySelector(".loading");
+  window.addEventListener("load", () => {
+    setTimeout(() => {
+      loader.classList.add("fade-out");
+      setTimeout(() => {
+        loader.style.display = "none";
+      }, 500);
+    }, 800); // Show loader for at least 800ms for visual effect
   });
 
-  // Mobile menu toggle
+  // Enhanced AOS initialization with improved animations
+  AOS.init({
+    duration: 800,
+    easing: "cubic-bezier(0.215, 0.61, 0.355, 1)", // Improved easing for smoother animations
+    once: false, // Allow animations to occur each time element scrolls into view
+    offset: 100,
+    delay: 50,
+    mirror: true, // Enables animations when scrolling back up
+    anchorPlacement: "top-bottom", // Default anchor placement
+    disable: false, // Enable on all devices for consistent experience
+  });
+
+  // Refresh AOS when window is resized
+  window.addEventListener("resize", () => {
+    AOS.refresh();
+  });
+
+  // Custom scroll animation for sections
+  const enhanceScrollAnimations = () => {
+    // Add subtle floating effect to images
+    const images = document.querySelectorAll(".character-card img");
+    images.forEach((img) => {
+      const randomDuration = 5 + Math.random() * 3; // Between 5-8s
+      img.style.animation = `float ${randomDuration}s ease-in-out infinite`;
+      img.style.animationDelay = `${Math.random() * 2}s`; // Random delay
+    });
+
+    // Initialize AOS with scroll direction detection
+    let lastScrollTop = 0;
+    window.addEventListener(
+      "scroll",
+      () => {
+        const st = window.pageYOffset || document.documentElement.scrollTop;
+        if (st > lastScrollTop + 50) {
+          // Scrolling down - refresh AOS with delay
+          setTimeout(() => AOS.refresh(), 50);
+        } else if (st < lastScrollTop - 50) {
+          // Scrolling up - refresh AOS with delay
+          setTimeout(() => AOS.refresh(), 50);
+        }
+        lastScrollTop = st <= 0 ? 0 : st; // For Mobile or negative scrolling
+      },
+      false
+    );
+  };
+
+  // Call the function after DOM content is loaded
+  enhanceScrollAnimations();
+
+  // Mobile menu toggle with accessibility
   const mobileMenuBtn = document.getElementById("mobile-menu");
   const navList = document.querySelector(".nav-list");
+  const body = document.body;
 
   if (mobileMenuBtn) {
     mobileMenuBtn.addEventListener("click", () => {
       navList.classList.toggle("show");
+      // Only change active class for styling, no rotation animation
+      mobileMenuBtn.classList.toggle("active");
+
+      // Toggle aria-expanded for accessibility
+      const isExpanded = navList.classList.contains("show");
+      mobileMenuBtn.setAttribute("aria-expanded", isExpanded);
+
+      // Prevent background scrolling when menu is open
+      if (isExpanded) {
+        body.style.overflow = "hidden";
+      } else {
+        body.style.overflow = "";
+      }
     });
   }
 
@@ -24,8 +90,25 @@ document.addEventListener("DOMContentLoaded", () => {
     link.addEventListener("click", () => {
       if (window.innerWidth < 768) {
         navList.classList.remove("show");
+        mobileMenuBtn.classList.remove("active");
+        mobileMenuBtn.setAttribute("aria-expanded", false);
+        body.style.overflow = "";
       }
     });
+  });
+
+  // Close menu when clicking outside of it
+  document.addEventListener("click", (e) => {
+    const isMenuOpen = navList.classList.contains("show");
+    const isClickInsideMenu = navList.contains(e.target);
+    const isClickOnMenuBtn = mobileMenuBtn.contains(e.target);
+
+    if (isMenuOpen && !isClickInsideMenu && !isClickOnMenuBtn) {
+      navList.classList.remove("show");
+      mobileMenuBtn.classList.remove("active");
+      mobileMenuBtn.setAttribute("aria-expanded", false);
+      body.style.overflow = "";
+    }
   });
 
   // Smooth scrolling for anchor links
@@ -187,13 +270,71 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 });
 
-// Add parallax effect to sections
+// Theme switch functionality
+document.addEventListener("DOMContentLoaded", () => {
+  const themeSwitch = document.getElementById("checkbox");
+  const htmlEl = document.documentElement;
+
+  if (!themeSwitch) {
+    console.error("Theme switch element not found");
+    return;
+  }
+
+  // Check for saved user preference and set initial state
+  const currentTheme = localStorage.getItem("theme");
+  if (currentTheme === "light") {
+    htmlEl.classList.remove("dark-theme");
+    htmlEl.classList.add("light-theme");
+    themeSwitch.checked = true;
+  } else {
+    // Ensure dark theme is applied by default
+    htmlEl.classList.add("dark-theme");
+    htmlEl.classList.remove("light-theme");
+    themeSwitch.checked = false;
+  }
+
+  // Handle theme switching
+  themeSwitch.addEventListener("change", function () {
+    if (this.checked) {
+      // Light mode
+      htmlEl.classList.remove("dark-theme");
+      htmlEl.classList.add("light-theme");
+      localStorage.setItem("theme", "light");
+    } else {
+      // Dark mode (default)
+      htmlEl.classList.remove("light-theme");
+      htmlEl.classList.add("dark-theme");
+      localStorage.setItem("theme", "dark");
+    }
+  });
+});
+
+// Scroll to top button functionality
+const scrollTopBtn = document.getElementById("scrollTop");
+
+window.addEventListener("scroll", () => {
+  // Show button when user scrolls down 300px
+  if (window.pageYOffset > 300) {
+    scrollTopBtn.classList.add("active");
+  } else {
+    scrollTopBtn.classList.remove("active");
+  }
+});
+
+scrollTopBtn.addEventListener("click", () => {
+  window.scrollTo({
+    top: 0,
+    behavior: "smooth",
+  });
+});
+
+// Subtle parallax effect (reduced intensity for better user experience)
 window.addEventListener("scroll", () => {
   const scrollPosition = window.pageYOffset;
 
-  // Apply parallax effect to various elements
+  // Apply very subtle parallax effect that won't be distracting
   document.querySelectorAll("article, section").forEach((element) => {
-    const distance = scrollPosition * 0.05;
+    const distance = scrollPosition * 0.02; // Reduced intensity
     const elementPosition =
       element.getBoundingClientRect().top + scrollPosition;
 
